@@ -5,7 +5,7 @@ from websockets.exceptions import ConnectionClosed
 USERS = []
 userCadastred = False
 
-async def hadle(websocket):
+async def handle(websocket):
 
     async for message in websockets:
 
@@ -18,6 +18,6 @@ async def hadle(websocket):
     for user in USERS:
         await user.send(message)
 
-start_server = websockets.serve(hadle, "127.0.0.1", 50000)
+start_server = websockets.serve(handle, "127.0.0.1", 50000)
 asyncio.get_event_loop().run_until_complete(start_server)
 asyncio.get_event_loop().run_forever()
