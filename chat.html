@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+<div class="conteiner-theme">
+        <div id="chat">
+<h2 id="nome-usuario"></h2>
+    
+            <div id="mensagens" class="mensagens">
+
+            </div>
+
+        <div class="campo">
+            <textarea name="mensagem" id="mensagem-input" cols="30" rows="3" placeholder="Digite sua mensagem"></textarea>
+            <button type="submit" id="button-ev">Enviar</button>
+        </div>
+    </div>  
+</div>
+</body>
+<script src="./websocket.js"></script>
+<script src="./nameuser.js"></script>
+<script src="./main.js"></script>
+</html>
