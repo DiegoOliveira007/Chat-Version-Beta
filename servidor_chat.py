@@ -7,7 +7,7 @@ userCadastred = False
 
 async def handle(websocket):
 
-    async for message in websockets:
+    async for message in websocket:
 
         userCadastred = any(item == websocket for item in USERS)
 
